@@ -1,5 +1,5 @@
-package MODEL.persistencia;
-import MODEL.persistencia.Conexao;
+package MODEL;
+import MODEL.Conexao;
 import java.sql.SQLException; 
 import java.sql.Connection; 
 import java.sql.Statement; 
