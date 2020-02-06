@@ -1,0 +1,100 @@
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body{
+    background-color: rgba(52,58,64,0.9);
+}
+h1, h2, h3{
+    color: white;
+}
+div{
+    display: block;
+}
+h2{
+    text-align: center;
+}
+p{
+    color: rgb(212, 212, 212);
+    font-weight: 200;
+}
+hr.cursos{
+    color: rgba(255, 255, 255, 1);
+    height: 10px;
+    width: 60vw;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.navbar-brand{
+    font-weight: 500;
+}
+.titulo{
+    display: inline-block;
+}
+.iconeTitulo{
+    margin: 10px;
+}
+.tituloPrincipal{
+    color: #8203db;
+    display: inline-block;
+    margin: 0px;
+    margin-top: 5px;
+    padding: 0px;
+    font-weight: bolder;
+}
+.subtitulo{
+    color: rgb(150, 150, 150);
+    font-size: 10px;
+    margin: 0px;
+    margin-top: -10px;
+    padding: 0px;
+    font-weight: normal;
+}
+.bg-secondary{
+    color: rgba(255, 255, 255, 0.7);
+}
+.carousel-item{
+    height: 675px;
+}
+.addCurso{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 2;
+}
+.addTurma{
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    z-index: 2;
+}
+.addComentario{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 2;
+}
+.card-img-top{
+    width: 100%;
+    height: 200px;
+}
+.card{
+    height: 430px;
+    text-align: center;
+}
+.cardComentario{
+    height: 150px;
+}
+.card-body{
+    height: 280px;
+
+}
+p.card-text{
+    font-size: 15px;
+}
+small{
+    color: rgb(255, 122, 122);
+    font-weight: bold;
+    font-size: 15px;
+    border: white;
+}
+
+
