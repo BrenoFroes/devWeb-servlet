@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package MODEL.dao;
-import MODEL.utilitarios.Conexao;
 import MODEL.classes.Aluno;
 import MODEL.utilitarios.Conexao;
 import java.sql.Connection;
