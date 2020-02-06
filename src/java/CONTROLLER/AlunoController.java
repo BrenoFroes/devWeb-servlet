@@ -1,12 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package CONTROLLER;
 
+import MODEL.dao.AlunoDAO;
+import MODEL.classes.Aluno;
 import java.io.IOException;
-import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,73 +12,69 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Breno
+ * @author victo
  */
 public class AlunoController extends HttpServlet {
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet AlunoController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet AlunoController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+    
+    private AlunoDAO alunodao;
+    
+    
+    public AlunoController(){
+        super();
+        alunodao=new AlunoDAO();
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String acao = request.getParameter("acao");//cria uma variavel que define a acao do doGet
+        // Long idPersona = Long.parseLong(request.getParameter("idPersonagem"));
+        Aluno aluno = (Aluno)request.getSession().getAttribute("aluno");
+//        if("add".equals(acao)){//se acao for "add", adiciona personagem favorito do Aluno
+//            alunodao.addFavorito(aluno.getId(), idPersona);
+//            aluno.insereFavorito(personagemDao.getById(idPersona.toString()));
+//        }else{//se acao nao for "add", remove personagem favorito do Aluno
+//            alunodao.removeFavorito(user.getId(), idPersona);
+//            user.removeFavorito(idPersona);
+//        }
+        request.getSession().setAttribute("aluno", aluno);//salva Aluno na seção
+        
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)//cria ou edita Aluno
             throws ServletException, IOException {
-        processRequest(request, response);
+        Aluno alun= new Aluno();
+        
+        alun.setCpf(request.getParameter("cpf"));
+        alun.setNome(request.getParameter("nome"));
+        alun.setEmail(request.getParameter("email"));
+        alun.setCelular(request.getParameter("celular"));
+        alun.setLogin(request.getParameter("login"));
+        alun.setSenha(request.getParameter("senha"));
+        alun.setEndereco(request.getParameter("endereco"));
+        alun.setCidade(request.getParameter("cidade"));
+        alun.setBairro(request.getParameter("bairro"));
+        alun.setCep(request.getParameter("cep"));
+        alun.setComentario(request.getParameter("comentario"));
+        alun.setAprovado(request.getParameter("aprovado"));
+        
+        boolean recebeEmail = false;//variavel que indica que o Aluno quer receber e-mail
+        if(request.getParameter("recebeEmail")!= null){
+            recebeEmail = true;
+        }
+  
+        if(request.getParameter("editar") == null)//se a variavel for null, cria Aluno
+        {
+            this.alunodao.create(alun);
+            RequestDispatcher view= request.getRequestDispatcher("/login.jsp");//redireciona para pagina de login
+            view.forward(request, response);
+        }
+        else if (request.getParameter("editar").equals("editar"))//se nao for igual a "editar", edita o Aluno
+        {
+            this.alunodao.editar(alun, request.getParameter("idaluno"));
+            RequestDispatcher view= request.getRequestDispatcher("/index.jsp");//redireciona para index
+            view.forward(request, response);
+        }
     }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
-}
+ }
