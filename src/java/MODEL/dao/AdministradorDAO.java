@@ -17,7 +17,7 @@ import java.util.logging.Logger;
  *
  * @author Breno
  */
-public class AdminstradorDAO {
+public class AdministradorDAO {
     
     
     //inserir novo usuário na tabela 'usuario'
