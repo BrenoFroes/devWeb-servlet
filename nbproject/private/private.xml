@@ -3,15 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/web/index.jsp</file>
-            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/web/pages/cadastroAdministrador.html</file>
-            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/web/head.jsp</file>
-            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/web/foot.jsp</file>
-            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/src/java/CONTROLLER/AlunoController.java</file>
-            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/web/pages/cursos.html</file>
-            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/web/pages/cadastrarAluno.jsp</file>
-            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/src/java/CONTROLLER/LoginController.java</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/src/java/MODEL/classes/Aluno.java</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/src/java/MODEL/dao/AlunoDAO.java</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/src/java/CONTROLLER/UsuarioAlunoController.java</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/src/java/CONTROLLER/AlunoControl.java</file>
             <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/web/pages/comentarios.html</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/web/index.jsp</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/web/head.jsp</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/web/pages/cadastroAdministrador.html</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/src/java/MODEL/dao/AdminstradorDAO.java</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/src/java/MODEL/classes/Administrador.java</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/web/foot.jsp</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/src/java/MODEL/utilitarios/Conexao.java</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/web/pages/cadastrarAluno.jsp</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/web/pages/cursos.html</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/src/java/MODEL/dao/MatriculaDAO.java</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/src/java/CONTROLLER/LoginController.java</file>
+            <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/src/java/MODEL/classes/Matricula.java</file>
             <file>file:/C:/Users/Breno/Documents/NetBeansProjects/devWeb/web/header.jsp</file>
         </group>
     </open-files>

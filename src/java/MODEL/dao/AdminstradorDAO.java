@@ -25,9 +25,10 @@ public class AdminstradorDAO {
         Connection con = Conexao.getConnection();
         PreparedStatement stm= null;
         try {
-            stm=con.prepareStatement("INSERT INTO administrador(login,senha) VALUES (?,?) ");
-            stm.setString(1,admin.getLogin());
-            stm.setString(2, admin.getSenha());
+            stm=con.prepareStatement("INSERT INTO administrador(nome,login,senha) VALUES (?,?,?) ");
+            stm.setString(1,admin.getNome());
+            stm.setString(2,admin.getLogin());
+            stm.setString(3, admin.getSenha());
             stm.executeUpdate();
         }catch (SQLException ex) {
             Logger.getLogger(Administrador.class.getName()).log(Level.SEVERE, null, ex);
@@ -85,7 +86,7 @@ public class AdminstradorDAO {
         ResultSet resultado = null;
         Administrador admin = new Administrador();
         try{
-            stm = con.prepareStatement("select * from administrador where email = ? and senha = ?");
+            stm = con.prepareStatement("select * from administrador where login = ? and senha = ?");
             stm.setString(1, login);
             stm.setString(2,senha);
             resultado = stm.executeQuery();

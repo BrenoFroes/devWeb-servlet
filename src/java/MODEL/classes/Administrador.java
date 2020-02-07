@@ -12,6 +12,8 @@ package MODEL.classes;
 public class Administrador {
     private int id;
    
+    private String nome;
+    
     private String login;
     
     private String senha;
@@ -24,6 +26,13 @@ public class Administrador {
         return this.id;
     }
     
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    
+    public String getNome(){
+        return this.nome;
+    }
     public void setLogin(String login){
         this.login = login;
     }

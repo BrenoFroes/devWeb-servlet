@@ -26,7 +26,7 @@
                 <div class="text-center">
                     <h2>Cadastre-se como aluno:</h2>
                     <a href="cadastroAdministrador.html" style="color:lightskyblue;">ou cadastre-se aqui como administrador.</a>
-                    <form action="#" onsubmit="adicionarAluno(this)">
+                    <form action="../AlunoControl" method="post">
                         <div class="row">
                             <div class="form-group col-6">
                                 <label for="inputCpfM">CPF:</label>

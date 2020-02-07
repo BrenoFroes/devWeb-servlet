@@ -4,9 +4,17 @@
         <servlet-name>AlunoController</servlet-name>
         <servlet-class>CONTROLLER.AlunoController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AlunoControl</servlet-name>
+        <servlet-class>CONTROLLER.AlunoControl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AlunoController</servlet-name>
         <url-pattern>/AlunoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlunoControl</servlet-name>
+        <url-pattern>/AlunoControl</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

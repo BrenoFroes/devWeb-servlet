@@ -8,17 +8,18 @@
  * @author Breno
  */
 package MODEL.classes;
-import java.util.ArrayList;
-import java.util.List;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Matricula {
     private int id;
     
-//    private List<Turma> turmas_id = new ArrayList();
-//    
-//    private List<Aluno> alunos_id = new ArrayList();
-//    
+    private int turmas_id;  
+    
+    private int alunos_id;
+    
     private Date data_matricula = new Date(); 
     
     private float nota;
@@ -29,6 +30,22 @@ public class Matricula {
     
     public int getId(){
         return this.id;
+    }
+    
+    public void setTurmasId(int tid){
+        this.turmas_id = tid;
+    }
+    
+    public int getTurmasId(){
+        return this.turmas_id;
+    }
+    
+    public void setAlunos(int aid){
+        this.turmas_id = aid;
+    }
+    
+    public int getAlunosId(){
+        return this.alunos_id;
     }
     
     public void setDataMatricula(Date data){
@@ -45,5 +62,11 @@ public class Matricula {
     
     public float getNota(){
         return this.nota;
+    }
+    
+    public String getDataMatriculaString(){
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");  
+        String data = dateFormat.format(this.data_matricula);
+        return data;
     }
 }
