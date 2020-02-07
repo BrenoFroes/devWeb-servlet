@@ -8,6 +8,10 @@
         <servlet-name>AlunoControl</servlet-name>
         <servlet-class>CONTROLLER.AlunoControl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CursoServlet</servlet-name>
+        <servlet-class>CONTROLLER.CursoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AlunoController</servlet-name>
         <url-pattern>/AlunoController</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>AlunoControl</servlet-name>
         <url-pattern>/AlunoControl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CursoServlet</servlet-name>
+        <url-pattern>/CursoServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

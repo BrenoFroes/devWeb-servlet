@@ -30,52 +30,52 @@
                         <div class="row">
                             <div class="form-group col-6">
                                 <label for="inputCpfM">CPF:</label>
-                                <input type="number" class="form-control" id="inputCpfM">
+                                <input type="number" class="form-control" id="inputCpfM" name="cpf">
                                 <small id="cpfHelpM" class="form-text"></small>
                             </div>
                             <div class="form-group col-6">
                                 <label for="inputNomeM">Nome:</label>
-                                <input type="text" class="form-control" id="inputNomeM">
+                                <input type="text" class="form-control" id="inputNomeM" name="nome">
                                 <small id="nomeHelpM" class="form-text"></small>
                             </div>
                             <div class="form-group col-6">
                                 <label for="inputEmailM">E-mail:</label>
-                                <input type="text" class="form-control" id="inputEmailM"></textarea>
+                                <input type="text" class="form-control" id="inputEmailM" name="email"></textarea>
                                 <small id="emailHelpM" class="form-text"></small>
                             </div>
                             <div class="form-group col-6">
                                 <label for="inputCelularM">Celular:</label>
-                                <input type="number" class="form-control" id="inputCelularM">
+                                <input type="number" class="form-control" id="inputCelularM" name="celular">
                                 <small id="celularHelpM" class="form-text"></small>
                             </div>
                             <div class="form-group col-6">
                                 <label for="inputLoginM">Login:</label>
-                                <input type="text" class="form-control" id="inputLoginM">
+                                <input type="text" class="form-control" id="inputLoginM" name="login">
                                 <small id="loginHelpM" class="form-text"></small>
                             </div>
                             <div class="form-group col-6">
                                 <label for="inputSenhaM">Senha:</label>
-                                <input type="password" class="form-control" id="inputSenhaM">
+                                <input type="password" class="form-control" id="inputSenhaM" name="senha">
                                 <small id="senhaHelpM" class="form-text"></small>
                             </div>
                             <div class="form-group col-6">
                                 <label for="inputEnderecoM">Endereço:</label>
-                                <input type="text" class="form-control" id="inputEnderecoM">
+                                <input type="text" class="form-control" id="inputEnderecoM" name="endereco">
                                 <small id="enderecoHelpM" class="form-text"></small>
                             </div>
                             <div class="form-group col-6">
                                 <label for="inputCidadeM">Cidade:</label>
-                                <input type="text" class="form-control" id="inputCidadeM">
+                                <input type="text" class="form-control" id="inputCidadeM" name="cidade">
                                 <small id="cidadeHelpM" class="form-text"></small>
                             </div>
                             <div class="form-group col-6">
                                 <label for="inputBairroM">Bairro:</label>
-                                <input type="text" class="form-control" id="inputBairroM">
+                                <input type="text" class="form-control" id="inputBairroM" name="bairro">
                                 <small id="bairroHelpM" class="form-text"></small>
                             </div>
                             <div class="form-group col-6">
                                 <label for="inputCepM">CEP:</label>
-                                <input type="number" class="form-control" id="inputCepM">
+                                <input type="number" class="form-control" id="inputCepM" name="cep">
                                 <small id="cepHelpM" class="form-text"></small>
                             </div>
                             <div class="col-12">

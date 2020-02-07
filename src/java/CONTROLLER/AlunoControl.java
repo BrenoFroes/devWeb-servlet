@@ -21,7 +21,7 @@ public class AlunoControl extends HttpServlet {
     
     public AlunoControl(){
         super();
-        alunodao=new AlunoDAO();
+        alunodao = new AlunoDAO();
     }
 
     @Override
@@ -56,13 +56,13 @@ public class AlunoControl extends HttpServlet {
         alun.setCidade(request.getParameter("cidade"));
         alun.setBairro(request.getParameter("bairro"));
         alun.setCep(request.getParameter("cep"));
-        alun.setComentario(request.getParameter("comentario"));
-        alun.setAprovado(request.getParameter("aprovado"));
+        alun.setComentario("");
+        alun.setAprovado("");
   
         if(request.getParameter("editar") == null)//se a variavel for null, cria Aluno
         {
             this.alunodao.create(alun);
-            RequestDispatcher view= request.getRequestDispatcher("/.jsp");//redireciona para pagina de login
+            RequestDispatcher view= request.getRequestDispatcher("/index.jsp");//redireciona para pagina de login
             view.forward(request, response);
         }
         else if (request.getParameter("editar").equals("editar"))//se nao for igual a "editar", edita o Aluno

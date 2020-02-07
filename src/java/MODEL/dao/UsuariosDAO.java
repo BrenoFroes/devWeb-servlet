@@ -18,7 +18,7 @@ import java.util.logging.Logger;
  *
  * @author Breno
  */
-public class AlunoDAO{
+public class UsuariosDAO{
     
 
    

@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package MODEL.dao;
-import MODEL.utilitarios.Conexao;
 import MODEL.classes.Aluno;
 import MODEL.utilitarios.Conexao;
 import java.sql.Connection;
@@ -26,7 +25,7 @@ public class AlunoDAO{
         PreparedStatement stm= null;
         try {
             stm=con.prepareStatement(
-                "INSERT INTO aluno(cpf, nome, email, celular, login, senha, endereco, cidade, bairro, cep, comentario, aprovado) "
+                "INSERT INTO alunos(cpf, nome, email, celular, login, senha, endereco, cidade, bairro, cep, comentario, aprovado) "
                         + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
             stm.setString(1, aluno.getCpf());
             stm.setString(2, aluno.getNome());
@@ -52,7 +51,7 @@ public class AlunoDAO{
         Connection con = Conexao.getConnection();
         PreparedStatement stm= null;
         try {
-            stm=con.prepareStatement("UPDATE aluno\n" +
+            stm=con.prepareStatement("UPDATE alunos\n" +
                                     "SET cpf = ?,  nome = ?, email = ?,\n"+
                                     "celular = ?, login = ?, senha = ?, \n" +
                                     "endereco = ?, cidade = ?, bairro = ? \n" +
@@ -78,6 +77,29 @@ public class AlunoDAO{
             Conexao.closeConnection(con, stm);
         }
     }
+    
+    public void deletar (String id){
+        PreparedStatement stm; 
+        ResultSet resultado = null;
+        Connection con = Conexao.getConnection();
+        
+        Aluno aluno = new Aluno();
+        
+        try {
+            stm=con.prepareStatement("DELETE FROM  alunos where id = ?;");
+            stm.setString(1, id);
+            resultado = stm.executeQuery();
+            while(resultado.next()){
+               aluno.setId(resultado.getInt("id"));
+               aluno.setLogin(resultado.getString("login"));
+            }
+            
+        } catch (SQLException ex) {
+            System.out.println("Driver nao pode ser carregado:"+ex);
+        } finally{
+            Conexao.closeConnection(con, null, resultado);
+        }
+    }
      
     //recuperar Usuario informando o 'id' do mesmo
     public Aluno getById (String id){
@@ -87,7 +109,7 @@ public class AlunoDAO{
         Aluno aluno = new Aluno();
         
         try{
-            stm = con.prepareStatement("select * from aluno where id = ?");
+            stm = con.prepareStatement("select * from alunos where id = ?");
             stm.setString(1, id);
             resultado = stm.executeQuery();
             while(resultado.next()){
