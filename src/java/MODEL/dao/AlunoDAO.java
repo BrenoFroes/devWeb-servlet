@@ -78,7 +78,7 @@ public class AlunoDAO{
         }
     }
     
-    public void deletar (String id){
+    public void delete (String id){
         PreparedStatement stm; 
         ResultSet resultado = null;
         Connection con = Conexao.getConnection();
@@ -86,13 +86,9 @@ public class AlunoDAO{
         Aluno aluno = new Aluno();
         
         try {
-            stm=con.prepareStatement("DELETE FROM  alunos where id = ?;");
+            stm=con.prepareStatement("DELETE FROM cursos where id = ?;");
             stm.setString(1, id);
-            resultado = stm.executeQuery();
-            while(resultado.next()){
-               aluno.setId(resultado.getInt("id"));
-               aluno.setLogin(resultado.getString("login"));
-            }
+            stm.executeUpdate();
             
         } catch (SQLException ex) {
             System.out.println("Driver nao pode ser carregado:"+ex);

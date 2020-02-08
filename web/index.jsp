@@ -31,27 +31,27 @@
 					<a class="nav-link" href="#">home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="pages/cadastrarAluno.jsp">instrutores</a>
+					<a class="nav-link" href="view/instrutores.jsp">instrutores</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="pages/cursos.html">cursos</a>
+					<a class="nav-link" href="view/cursos.jsp">cursos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="pages/tabelas.html">tabelas</a>
+					<a class="nav-link" href="view/tabelas.jsp">tabelas</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="pages/comentarios.html">comentários</a>
+					<a class="nav-link" href="view/comentarios.jsp">comentários</a>
 				</li>
 				<li class="nav-item mr-5">
-					<a class="nav-link" href="pages/sobre.html">sobre</a>
+					<a class="nav-link" href="view/sobre.jsp">sobre</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="pages/login.html">
+					<a class="nav-link" href="view/login.jsp">
 						<button type="button" class="btn btn-light px-3 py-0">Login</button>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="pages/cadastrar.html">
+					<a class="nav-link" href="view/cadastrarAluno.jsp">
 						<button type="button" class="btn btn-outline-light px-3 py-0" data-toggle="modal"
 							data-target="#exampleModal">Registro</button>
 					</a>

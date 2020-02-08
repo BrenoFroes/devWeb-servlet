@@ -14,12 +14,12 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author victo
  */
-public class AlunoControl extends HttpServlet {
+public class AlunoController extends HttpServlet {
     
     private AlunoDAO alunodao;
     
     
-    public AlunoControl(){
+    public AlunoController(){
         super();
         alunodao = new AlunoDAO();
     }
@@ -56,12 +56,18 @@ public class AlunoControl extends HttpServlet {
         alun.setCidade(request.getParameter("cidade"));
         alun.setBairro(request.getParameter("bairro"));
         alun.setCep(request.getParameter("cep"));
-        alun.setComentario("");
-        alun.setAprovado("");
+        alun.setComentario("oi");
+        alun.setAprovado("1");
   
-        if(request.getParameter("editar") == null)//se a variavel for null, cria Aluno
+        if(request.getParameter("editar") == null && request.getParameter("deletar") == null)//se a variavel for null, cria Aluno
         {
             this.alunodao.create(alun);
+            RequestDispatcher view= request.getRequestDispatcher("/index.jsp");//redireciona para pagina de login
+            view.forward(request, response);
+        }
+        else if(request.getParameter("deletar").equals("deletar"))//se a variavel for null, cria Aluno
+        {
+            this.alunodao.delete(request.getParameter("idAluno"));
             RequestDispatcher view= request.getRequestDispatcher("/index.jsp");//redireciona para pagina de login
             view.forward(request, response);
         }

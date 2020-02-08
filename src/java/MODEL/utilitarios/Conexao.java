@@ -6,13 +6,13 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Breno
+ * @author Victor
  */
 //Classe referente a conexão com banco de dados
 public class Conexao {
     //propriedades da conexão
     private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://localhost:3306/escola?zeroDateTimeBehavior=convertToNull";
+    private static final String URL = "jdbc:mysql://localhost:3306/escola?useTimezone=true&serverTimezone=UTC";
     private static final String USER = "root";
     private static final String PASS = "";
     

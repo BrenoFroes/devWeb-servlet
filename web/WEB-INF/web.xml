@@ -6,11 +6,19 @@
     </servlet>
     <servlet>
         <servlet-name>AlunoControl</servlet-name>
-        <servlet-class>CONTROLLER.AlunoControl</servlet-class>
+        <servlet-class>CONTROLLER.AlunoController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CursoServlet</servlet-name>
         <servlet-class>CONTROLLER.CursoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>CONTROLLER.Login</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginC</servlet-name>
+        <servlet-class>CONTROLLER.LoginC</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AlunoController</servlet-name>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>CursoServlet</servlet-name>
         <url-pattern>/CursoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginC</servlet-name>
+        <url-pattern>/LoginC</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

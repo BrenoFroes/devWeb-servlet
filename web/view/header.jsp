@@ -21,30 +21,30 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav mt-1">
 				<li class="nav-item">
-					<a class="nav-link" href="../index.jsp.html">home</a>
+					<a class="nav-link" href="../index.jsp">home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="instrutores.html">instrutores</a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="cursos.html">cursos <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="instrutores.jsp">instrutores</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="tabelas.html">tabelas</a>
+					<a class="nav-link" href="cursos.jsp">cursos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="comentarios.html">comentários</a>
+					<a class="nav-link" href="tabelas.jsp">tabelas</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="comentarios.jsp">comentários</a>
 				</li>
 				<li class="nav-item mr-5">
-					<a class="nav-link" href="sobre.html">sobre</a>
+					<a class="nav-link" href="sobre.jsp">sobre</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="login.html">
+					<a class="nav-link" href="login.jsp">
 						<button type="button" class="btn btn-light px-3 py-0">Login</button>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="cadastrar.html">
+					<a class="nav-link" href="cadastrarAluno.jsp">
 						<button type="button" class="btn btn-outline-light px-3 py-0" data-toggle="modal"
 							data-target="#exampleModal">Registro</button>
 					</a>

@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="../head.jsp" %>
+<%@include file="header.jsp" %>
 	<div class="container-fluid mt-5">
         <div class="text-center">
             <h2>CURSOS</h2>
@@ -64,30 +64,30 @@
 			</button>
 		</div>
 		<div class="modal-body">
-			<form action="#" onsubmit="adicionarCurso(this)">
+			<form action="../CursoContoller" method="post">
 				<div class="form-group">
 				  <label for="inputNomeM">Nome do curso:</label>
-				  <input class="form-control" id="inputNomeM">
-				  <small id="nomeHelpM" class="form-text"></small>
+				  <input class="form-control" id="inputNomeM" name="nome">
+				  <small id="nomeHelpM" class="form-text" ></small>
 				</div>
-				<div class="form-group">
-					<label for="inputNomeM">Requisito:</label>
-					<input type="text" class="form-control" id="inputRequisitoM">
-					<small id="requisitoHelpM" class="form-text"></small>
+                                <div class="form-group">
+                                    <label for="inputNomeM">Requisito:</label>
+                                    <input type="text" class="form-control" id="inputRequisitoM" name="requisito">
+                                    <small id="requisitoHelpM" class="form-text"></small>
 				</div>
 				<div class="form-group">
 				  <label for="inputEmentaM">Ementa:</label>
-				  <textarea class="form-control" id="inputEmentaM" rows="3"></textarea>
+				  <textarea class="form-control" id="inputEmentaM" rows="3" name="ementa"></textarea>
 				  <small id="ementaHelpM" class="form-text"></small>
 				</div>
 				<div class="form-group">
 					<label for="inputCargaM">Carga horária (h):</label>
-					<input type="number" class="form-control" id="inputCargaM">
+					<input type="number" class="form-control" id="inputCargaM" name="cargaHoraria">
 					<small id="cargaHelpM" class="form-text"></small>
 				</div>
 				<div class="form-group">
 					<label for="inputPrecoM">Preço (R$):</label>
-					<input type="number" class="form-control" id="inputPrecoM">
+					<input type="number" class="form-control" id="inputPrecoM" name="preco">
 					<small id="precoHelpM" class="form-text"></small>
 				</div>
 				<button type="submit" class="btn btn-primary ml-3" style="float: right;">Salvar</button>
@@ -97,4 +97,4 @@
 		</div>
 	</div>
 	</div>
-<%@include file="../foot.jsp" %>
+<%@include file="foot.jsp" %>
