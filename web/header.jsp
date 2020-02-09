@@ -7,7 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="head.jsp"%>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"">
-		<a class="navbar-brand" href="../index.jsp.html">
+		<a class="navbar-brand" href="../index.jsp">
 		<img src="../cerebro.png" width="30" height="30" class="d-inline-block align-top mr-2 iconeTitulo" alt="">
 		<div class="titulo">
 			<p class="tituloPrincipal">Lero Lero</p>
@@ -21,7 +21,7 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav mt-1">
 				<li class="nav-item">
-					<a class="nav-link" href="../index.jsp.html">home</a>
+					<a class="nav-link" href="../index.jsp">home</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="instrutores.html">instrutores</a>

@@ -23,11 +23,12 @@ public class AdministradorDAO {
     //inserir novo usuário na tabela 'usuario'
     public void create (Administrador admin){
         Connection con = Conexao.getConnection();
-        PreparedStatement stm= null;
+        PreparedStatement stm = null;
         try {
-            stm=con.prepareStatement("INSERT INTO administrador(login,senha) VALUES (?,?) ");
-            stm.setString(1,admin.getLogin());
-            stm.setString(2, admin.getSenha());
+            stm = con.prepareStatement("INSERT INTO administrador(nome,login,senha) VALUES (?,?,?) ");
+            stm.setString(1,admin.getNome());
+            stm.setString(2,admin.getLogin());
+            stm.setString(3, admin.getSenha());
             stm.executeUpdate();
         }catch (SQLException ex) {
             Logger.getLogger(Administrador.class.getName()).log(Level.SEVERE, null, ex);
@@ -41,11 +42,11 @@ public class AdministradorDAO {
         PreparedStatement stm= null;
         try {
             stm=con.prepareStatement("UPDATE administrador\n" +
-                                    "SET login = ?,  senha = ?, \n" +
+                                    "SET nome = ?, login = ?,  senha = ?, \n" +
                                     "where id = ?;");
-            stm.setString(1, admin.getLogin());
-            stm.setString(2, admin.getSenha());
-            stm.setString(8, id);
+            stm.setString(1,admin.getNome());
+            stm.setString(2,admin.getLogin());
+            stm.setString(3, admin.getSenha());
             stm.executeUpdate();
         }catch (SQLException ex) {
             Logger.getLogger(Administrador.class.getName()).log(Level.SEVERE, null, ex);

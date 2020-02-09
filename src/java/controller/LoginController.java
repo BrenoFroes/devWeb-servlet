@@ -1,4 +1,4 @@
-package CONTROLLER;
+package controller;
 import MODEL.classes.Administrador;
 import javax.servlet.http.Cookie;
 import MODEL.classes.Aluno;
@@ -47,7 +47,8 @@ public class LoginController extends HttpServlet {
         instrutor = instrutorDAO.validateUser(login, senha);
         aluno = alunoDAO.validateUser(login, senha);  //valida dados informados
         
-        if(admin.getId() != null){     
+        Integer n = admin.getId();
+        if(n != null){     
             request.getSession().setAttribute("admin", admin);
             Cookie cookielogin=new Cookie("login",login);   //implementação de cookie dos dados de login
             Cookie cookiesenha= new Cookie("senha",senha);
@@ -62,7 +63,8 @@ public class LoginController extends HttpServlet {
           request.getRequestDispatcher("login.jsp").forward(request, response);
         }
         
-        if(instrutor.getId() != null){     
+        n = instrutor.getId();
+        if(n != null){     
             request.getSession().setAttribute("instrutor", instrutor);
             Cookie cookielogin=new Cookie("login",login);   //implementação de cookie dos dados de login
             Cookie cookiesenha= new Cookie("senha",senha);
@@ -77,7 +79,8 @@ public class LoginController extends HttpServlet {
           request.getRequestDispatcher("login.jsp").forward(request, response);
         }
         
-        if(aluno.getId() != null){     
+        n = aluno.getId();
+        if(n != null){     
             request.getSession().setAttribute("aluno", aluno);
             Cookie cookielogin=new Cookie("login",login);   //implementação de cookie dos dados de login
             Cookie cookiesenha= new Cookie("senha",senha);
