@@ -14,7 +14,7 @@
 	<title>Lero Lero</title>
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark"">
-		<a class=" navbar-brand" href="index.html">
+		<a class=" navbar-brand" href="index.jsp">
 		<img src="cerebro.png" width="30" height="30" class="d-inline-block align-top mr-2 iconeTitulo" alt="">
 		<div class="titulo">
 			<p class="tituloPrincipal">Lero Lero</p>

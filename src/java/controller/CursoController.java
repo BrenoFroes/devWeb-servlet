@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CONTROLLER;
+package controller;
 
 import MODEL.classes.Curso;
 import MODEL.dao.CursoDAO;

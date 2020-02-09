@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CONTROLLER;
+package controller;
 
 /**
  *
  * @author rodol
  */
-public class AdminController {
+public class MatriculaController {
     
 }
