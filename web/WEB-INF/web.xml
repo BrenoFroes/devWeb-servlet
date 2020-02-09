@@ -24,21 +24,8 @@
         <servlet-name>AlunoController</servlet-name>
         <url-pattern>/AlunoController</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>AlunoControl</servlet-name>
-        <url-pattern>/AlunoControl</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>CursoServlet</servlet-name>
-        <url-pattern>/CursoServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>LoginC</servlet-name>
-        <url-pattern>/LoginC</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
