@@ -26,7 +26,6 @@ public class CursoController {
         cursodao = new CursoDAO();
     }
 
-    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String acao = request.getParameter("acao");//cria uma variavel que define a acao do doGet
@@ -43,7 +42,6 @@ public class CursoController {
         
     }
 
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)//cria ou edita Aluno
             throws ServletException, IOException {
         Curso curs= new Curso();
@@ -68,5 +66,3 @@ public class CursoController {
         }
     }
  }
-
-}
