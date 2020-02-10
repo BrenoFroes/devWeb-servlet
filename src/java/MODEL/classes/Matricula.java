@@ -14,11 +14,11 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Matricula {
-    private int id;
+    private Integer id;
     
-    private int turmas_id;  
+    private Integer turmas_id;  
     
-    private int alunos_id;
+    private Integer alunos_id;
     
     private Date data_matricula = new Date(); 
     

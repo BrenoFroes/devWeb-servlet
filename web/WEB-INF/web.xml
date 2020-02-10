@@ -9,12 +9,24 @@
         <servlet-class>controller.InstrutorController</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>AlunoController</servlet-name>
+        <servlet-class>controller.AlunoController</servlet-class>
+    </servlet>
+        <servlet>
+        <servlet-name>TurmaController</servlet-name>
+        <servlet-class>controller.TurmaController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MatriculaController</servlet-name>
+        <servlet-class>controller.MatriculaController</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>CursoController</servlet-name>
         <servlet-class>controller.CursoController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>AlunoController</servlet-name>
-        <servlet-class>controller.AlunoController</servlet-class>
+        <servlet-name>ComentarioController</servlet-name>
+        <servlet-class>controller.ComentarioController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Login</servlet-name>
@@ -23,10 +35,6 @@
     <servlet>
         <servlet-name>LoginC</servlet-name>
         <servlet-class>CONTROLLER.LoginC</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>TurmaController</servlet-name>
-        <servlet-class>CONTROLLER.TurmaController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -41,12 +49,16 @@
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 6846e086c8630bb3ba144c0085780fec922b1207
     
     <servlet-mapping>
+        <servlet-name>AdministradorController</servlet-name>
+        <url-pattern>/controller/AdministradorController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>InstrutorController</servlet-name>
         <url-pattern>/controller/InstrutorController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>AdministradorController</servlet-name>
-        <url-pattern>/controller/AdministradorController</url-pattern>
+        <servlet-name>TurmaController</servlet-name>
+        <url-pattern>/controller/TurmaController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

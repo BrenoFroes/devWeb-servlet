@@ -8,6 +8,8 @@ package controller;
 import MODEL.classes.Curso;
 import MODEL.dao.CursoDAO;
 import java.io.IOException;
+import java.io.PrintWriter;
+import static java.lang.System.out;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,23 +22,32 @@ import javax.servlet.http.HttpServletResponse;
  * @author rodol
  */
 @WebServlet(urlPatterns = {"/controller/CursoController"})
-public class CursoController extends HttpServlet{
-    
+public class CursoController extends HttpServlet {
+
     private CursoDAO cursoDAO = new CursoDAO();
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("Servlet ok");
+        }
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Curso curso = new Curso();
-        
+
         curso.setNome(request.getParameter("nome"));
         curso.setRequisito(request.getParameter("requisito"));
         curso.setEmenta(request.getParameter("ementa"));
         curso.setCargaHoraria(Integer.parseInt(request.getParameter("cargaHoraria")));
         curso.setPreco(Double.parseDouble(request.getParameter("preco")));
-        
+
         cursoDAO.create(curso);
         RequestDispatcher view = request.getRequestDispatcher("/index.jsp");
         view.forward(request, response);
     }
- }
+}

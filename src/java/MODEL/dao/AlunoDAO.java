@@ -18,8 +18,6 @@ import java.util.logging.Logger;
  */
 public class AlunoDAO{
     
-    
-    //inserir novo usuário na tabela 'usuario'
     public void create (Aluno aluno){
         Connection con = Conexao.getConnection();
         PreparedStatement stm= null;

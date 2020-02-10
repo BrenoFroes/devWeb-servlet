@@ -64,12 +64,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<form action="#" onsubmit="adicionarMatricula(this)">
-					<div class="form-group">
-					  <label for="inputTurmaM">Turma:</label>
-					  <input class="form-control" id="inputTurmaM" name="turma">
-					  <small id="turmaHelpM" class="form-text"></small>
-					</div>
+				<form action="../controller/MatriculaController" onsubmit="adicionarMatricula(this)">
 					<div class="form-group">
 						<label for="inputAlunoM">Aluno:</label>
 						<input type="text" class="form-control" id="inputAlunoM" name="aluno">

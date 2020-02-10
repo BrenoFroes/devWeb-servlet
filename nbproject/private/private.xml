@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/rodol/Downloads/DevWebTrab2/devWeb-servlet/src/java/controller/InstrutorController.java</file>
-            <file>file:/C:/Users/rodol/Downloads/DevWebTrab2/devWeb-servlet/web/view/cursos.jsp</file>
-            <file>file:/C:/Users/rodol/Downloads/DevWebTrab2/devWeb-servlet/src/java/controller/CursoController.java</file>
+            <file>file:/C:/Users/rodol/Downloads/DevWebTrab2/devWeb-servlet/src/java/controller/AlunoController.java</file>
             <file>file:/C:/Users/rodol/Downloads/DevWebTrab2/devWeb-servlet/src/java/controller/AdminController.java</file>
             <file>file:/C:/Users/rodol/Downloads/DevWebTrab2/devWeb-servlet/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/rodol/Downloads/DevWebTrab2/devWeb-servlet/web/view/cadastrarAluno.jsp</file>
         </group>
     </open-files>
 </project-private>
