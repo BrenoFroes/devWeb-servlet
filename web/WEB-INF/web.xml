@@ -32,18 +32,10 @@
         <servlet-name>AlunoController</servlet-name>
         <url-pattern>/AlunoController</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>AlunoControl</servlet-name>
-        <url-pattern>/AlunoControl</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>CursoServlet</servlet-name>
-        <url-pattern>/CursoServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
+<<<<<<< HEAD
     <servlet-mapping>
         <servlet-name>LoginC</servlet-name>
         <url-pattern>/LoginC</url-pattern>
@@ -56,6 +48,8 @@
         <servlet-name>TurmaController</servlet-name>
         <url-pattern>/TurmaController</url-pattern>
     </servlet-mapping>
+=======
+>>>>>>> 6846e086c8630bb3ba144c0085780fec922b1207
     <session-config>
         <session-timeout>
             30
