@@ -12,7 +12,7 @@ import java.util.List;
  * @author Breno
  */
 public class Curso {
-    private int id;
+    private Integer id;
     
     private String nome;
     
@@ -20,7 +20,7 @@ public class Curso {
     
     private String ementa;
     
-    private int carga_horaria;
+    private Integer carga_horaria;
     
     private Double preco;
     
@@ -30,7 +30,7 @@ public class Curso {
         this.id = id;
     }
     
-    public int getId(){
+    public Integer getId(){
         return this.id;
     }
     
@@ -62,7 +62,7 @@ public class Curso {
         this.carga_horaria = carga;
     }
     
-    public int getCargaHoraria(){
+    public Integer getCargaHoraria(){
         return this.carga_horaria;
     }
     

@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 public class AdministradorDAO {
     
     
-    //inserir novo usuário na tabela 'usuario'
+    //inserir novo administrador na tabela 'administrador'
     public void create (Administrador admin){
         Connection con = Conexao.getConnection();
         PreparedStatement stm = null;
@@ -36,7 +36,7 @@ public class AdministradorDAO {
             Conexao.closeConnection(con, stm);
         }
     }
-    //edita um usuario
+    //edita um administrador
     public void editar (Administrador admin, String id){
         Connection con = Conexao.getConnection();
         PreparedStatement stm= null;

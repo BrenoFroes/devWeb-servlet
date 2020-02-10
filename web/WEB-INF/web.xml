@@ -20,6 +20,14 @@
         <servlet-name>LoginC</servlet-name>
         <servlet-class>CONTROLLER.LoginC</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>InstrutorController</servlet-name>
+        <servlet-class>controller.InstrutorController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TurmaController</servlet-name>
+        <servlet-class>controller.TurmaController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AlunoController</servlet-name>
         <url-pattern>/AlunoController</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>LoginC</servlet-name>
         <url-pattern>/LoginC</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InstrutorController</servlet-name>
+        <url-pattern>/InstrutorController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TurmaController</servlet-name>
+        <url-pattern>/TurmaController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

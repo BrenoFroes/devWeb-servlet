@@ -26,7 +26,7 @@ public class AdminController extends HttpServlet{
     private AdministradorDAO adminDAO = new AdministradorDAO();
     
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)//cria ou edita usuario
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Administrador admin = new Administrador();
         
