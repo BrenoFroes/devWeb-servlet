@@ -25,7 +25,7 @@ public class CursoDAO {
         PreparedStatement stm = null;
         try {
             stm = con.prepareStatement(
-                    "INSERT INTO curso(nome, requisito, ementa, carga_horaria, preco) "
+                    "INSERT INTO cursos(nome, requisito, ementa, carga_horaria, preco) "
                     + "VALUES (?,?,?,?,?) ");
             stm.setString(1, curso.getNome());
             stm.setString(2, curso.getRequisito());

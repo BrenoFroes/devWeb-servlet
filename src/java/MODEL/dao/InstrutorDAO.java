@@ -25,7 +25,7 @@ public class InstrutorDAO {
         PreparedStatement stm = null;
         try {
             stm = con.prepareStatement(
-                    "INSERT INTO instrutor(nome, email, valor_hora, login, senha, experiencia) "
+                    "INSERT INTO instrutores(nome, email, valor_hora, login, senha, experiencia) "
                     + "VALUES (?,?,?,?,?,?)");
             stm.setString(1, instrutor.getNome());
             stm.setString(2, instrutor.getEmail());

@@ -64,7 +64,7 @@
 			</button>
 		</div>
 		<div class="modal-body">
-			<form method="POST" action="../controller/CursoContoller">
+			<form method="POST" action="../controller/CursoController">
 				<div class="form-group">
 				  <label for="inputNomeM">Nome do curso:</label>
 				  <input class="form-control" id="inputNomeM" name="nome">
