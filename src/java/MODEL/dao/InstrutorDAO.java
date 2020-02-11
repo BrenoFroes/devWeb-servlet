@@ -91,7 +91,7 @@ public class InstrutorDAO {
         ResultSet resultado = null;
         Instrutor instrutor = new Instrutor();
         try {
-            stm = con.prepareStatement("select * from instrutor where login = ? and senha = ?");
+            stm = con.prepareStatement("select * from instrutores where login = ? and senha = ?");
             stm.setString(1, login);
             stm.setString(2, senha);
             resultado = stm.executeQuery();
