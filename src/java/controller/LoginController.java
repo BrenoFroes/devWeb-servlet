@@ -7,11 +7,14 @@ import MODEL.dao.AdministradorDAO;
 import MODEL.dao.AlunoDAO;
 import MODEL.dao.InstrutorDAO;
 import java.io.IOException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@WebServlet(urlPatterns = {"/controller/LoginController"})
 public class LoginController extends HttpServlet {
     
     AdministradorDAO adminDAO = new AdministradorDAO();
@@ -59,7 +62,9 @@ public class LoginController extends HttpServlet {
             response.addCookie(cookieLogin);
             response.addCookie(cookieSenha);
             response.addCookie(cookieTipo);
-            request.getRequestDispatcher("adminController.java").forward(request, response);
+            //request.getRequestDispatcher("controller.AdminController").forward(request, response);
+            RequestDispatcher view = request.getRequestDispatcher("../view/perfil.jsp");
+            view.forward(request, response);
         }
         
         n = instrutor.getId();
@@ -74,7 +79,9 @@ public class LoginController extends HttpServlet {
             response.addCookie(cookieLogin);
             response.addCookie(cookieSenha);
             response.addCookie(cookieTipo);
-            request.getRequestDispatcher("instrutorController.java").forward(request, response);
+            //request.getRequestDispatcher("instrutorController.java").forward(request, response);
+            RequestDispatcher view = request.getRequestDispatcher("../view/perfil.jsp");
+            view.forward(request, response);
         }
         
         n = aluno.getId();
@@ -89,7 +96,9 @@ public class LoginController extends HttpServlet {
             response.addCookie(cookieLogin);
             response.addCookie(cookieSenha);
             response.addCookie(cookieTipo);
-            request.getRequestDispatcher("alunoController.java").forward(request, response);
+            //request.getRequestDispatcher("alunoController.java").forward(request, response);
+            RequestDispatcher view = request.getRequestDispatcher("../view/perfil.jsp");
+            view.forward(request, response);
         }
         
         else{

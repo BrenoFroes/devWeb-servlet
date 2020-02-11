@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <form class="p-3" action="../Login" method="post"  onsubmit="validaLogin()" id="formLogin">
+                <form class="p-3" action="../controller/LoginController" method="POST"  onsubmit="validaLogin()" id="formLogin">
                     <div class="form-group">
                       	<label class="loginInput" for="InputLogin">Login</label>
                       	<input class="form-control" id="inputLogin" name="login"  aria-describedby="emailHelp">

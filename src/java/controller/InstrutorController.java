@@ -46,7 +46,7 @@ public class InstrutorController extends HttpServlet {
         instrutor.setSenha(request.getParameter("senha"));
 
         instrutorDAO.create(instrutor);
-        RequestDispatcher view = request.getRequestDispatcher("/index.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("../index.jsp");
         view.forward(request, response);
     }
 

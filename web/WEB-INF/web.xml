@@ -29,21 +29,9 @@
         <servlet-class>controller.ComentarioController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Login</servlet-name>
-        <servlet-class>CONTROLLER.Login</servlet-class>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>controller.LoginController</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>LoginC</servlet-name>
-        <servlet-class>CONTROLLER.LoginC</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Login</servlet-name>
-        <url-pattern>/Login</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>LoginC</servlet-name>
-        <url-pattern>/LoginC</url-pattern>
-    </servlet-mapping>
 
 =======
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 6846e086c8630bb3ba144c0085780fec922b1207
