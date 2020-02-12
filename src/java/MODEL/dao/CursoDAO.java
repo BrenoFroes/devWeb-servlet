@@ -25,8 +25,8 @@ public class CursoDAO {
         PreparedStatement stm = null;
         try {
             stm = con.prepareStatement(
-                    "INSERT INTO curso(nome, requisito, ementa, carga_horaria, preco) "
-                    + "VALUES (?,?,?,?,?)");
+                    "INSERT INTO cursos(nome, requisito, ementa, carga_horaria, preco) "
+                    + "VALUES (?,?,?,?,?) ");
             stm.setString(1, curso.getNome());
             stm.setString(2, curso.getRequisito());
             stm.setString(3, curso.getEmenta());
@@ -40,7 +40,7 @@ public class CursoDAO {
         }
     }
 
-    public void editar(Curso curso, String id) {
+    /*public void editar(Curso curso, String id) {
         Connection con = Conexao.getConnection();
         PreparedStatement stm = null;
         try {
@@ -81,5 +81,5 @@ public class CursoDAO {
             Conexao.closeConnection(con, null, resultado);
         }
         return curso;
-    }
+    }*/
 }

@@ -26,7 +26,7 @@ public class TurmaDAO {
         PreparedStatement stm = null;
         try {
             stm = con.prepareStatement(
-                    "INSERT INTO turma(data_inicio, data_fim, carga_horaria) "
+                    "INSERT INTO turmas(data_inicio, data_fim, carga_horaria) "
                     + "VALUES (?,?,?)");
             DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy"); 
             stm.setString(1, dateFormat.format(turma.getDataInicio()));
@@ -44,7 +44,7 @@ public class TurmaDAO {
         Connection con = Conexao.getConnection();
         PreparedStatement stm = null;
         try {
-            stm = con.prepareStatement("UPDATE turma\n"
+            stm = con.prepareStatement("UPDATE turmas\n"
                     + "SET data_inicio = ?,  data_fim = ?, carga_horaria = ?;");
             DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy"); 
             stm.setString(1, dateFormat.format(turma.getDataInicio()));
@@ -65,7 +65,7 @@ public class TurmaDAO {
         Turma turma = new Turma();
 
         try {
-            stm = con.prepareStatement("select * from turma where id = ?");
+            stm = con.prepareStatement("select * from turmas where id = ?");
             stm.setString(1, id);
             resultado = stm.executeQuery();
             while (resultado.next()) {

@@ -9,6 +9,10 @@
 <!-- in the project's Project Properties dialog box.-->
 <project name="devWeb" default="default" basedir=".">
     <description>Builds, tests, and runs the project devWeb.</description>
+<!-- =======
+<project name="WebDev" default="default" basedir=".">
+    <description>Builds, tests, and runs the project WebDev.</description>
+>>>>>>> Tentando resolucao -->
     <import file="nbproject/build-impl.xml"/>
     <!--
 

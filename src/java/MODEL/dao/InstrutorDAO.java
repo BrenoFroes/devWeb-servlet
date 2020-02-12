@@ -25,7 +25,7 @@ public class InstrutorDAO {
         PreparedStatement stm = null;
         try {
             stm = con.prepareStatement(
-                    "INSERT INTO instrutor(nome, email, valor_hora, login, senha, experiencia) "
+                    "INSERT INTO instrutores(nome, email, valor_hora, login, senha, experiencia) "
                     + "VALUES (?,?,?,?,?,?)");
             stm.setString(1, instrutor.getNome());
             stm.setString(2, instrutor.getEmail());
@@ -45,7 +45,7 @@ public class InstrutorDAO {
         Connection con = Conexao.getConnection();
         PreparedStatement stm = null;
         try {
-            stm = con.prepareStatement("UPDATE instrutor\n"
+            stm = con.prepareStatement("UPDATE instrutores\n"
                     + "SET nome = ?,  email = ?, valor_hora = ?,\n"
                     + "login = ?, senha = ?, experiencia = ?;");
             stm.setString(1, instrutor.getNome());
@@ -69,7 +69,7 @@ public class InstrutorDAO {
         Instrutor instrutor = new Instrutor();
 
         try {
-            stm = con.prepareStatement("select * from curso where id = ?");
+            stm = con.prepareStatement("select * from cursos where id = ?");
             stm.setString(1, id);
             resultado = stm.executeQuery();
             while (resultado.next()) {
@@ -91,7 +91,7 @@ public class InstrutorDAO {
         ResultSet resultado = null;
         Instrutor instrutor = new Instrutor();
         try {
-            stm = con.prepareStatement("select * from instrutor where login = ? and senha = ?");
+            stm = con.prepareStatement("select * from instrutores where login = ? and senha = ?");
             stm.setString(1, login);
             stm.setString(2, senha);
             resultado = stm.executeQuery();

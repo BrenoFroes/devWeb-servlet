@@ -18,8 +18,6 @@ import java.util.logging.Logger;
  */
 public class AlunoDAO{
     
-    
-    //inserir novo usuário na tabela 'usuario'
     public void create (Aluno aluno){
         Connection con = Conexao.getConnection();
         PreparedStatement stm= null;
@@ -128,7 +126,7 @@ public class AlunoDAO{
         ResultSet resultado = null;
         Aluno aluno = new Aluno();
         try{
-            stm = con.prepareStatement("select * from aluno where login = ? and senha = ?");
+            stm = con.prepareStatement("select * from alunos where login = ? and senha = ?");
             stm.setString(1, login);
             stm.setString(2, senha);
             resultado = stm.executeQuery();

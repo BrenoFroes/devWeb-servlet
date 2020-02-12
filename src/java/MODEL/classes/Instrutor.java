@@ -12,7 +12,7 @@ import java.util.List;
  * @author Breno
  */
 public class Instrutor {
-    private int id;
+    private Integer id;
     
     private String nome;
     
@@ -28,11 +28,11 @@ public class Instrutor {
     
     private List<Turma> turmas = new ArrayList();
     
-    public void setId(int id){
+    public void setId(Integer id){
         this.id = id;
     }
     
-    public int getId(){
+    public Integer getId(){
         return this.id;
     }
     
@@ -52,11 +52,11 @@ public class Instrutor {
         return this.email;
     }
     
-    public void setValorHora(int valor){
+    public void setValorHora(Integer valor){
         this.valor_hora = valor;
     }
     
-    public int getValorHora(){
+    public Integer getValorHora(){
         return this.valor_hora;
     }
     

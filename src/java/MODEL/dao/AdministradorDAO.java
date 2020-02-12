@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package MODEL.dao;
-import MODEL.utilitarios.Conexao;
 import MODEL.classes.Administrador;
 import MODEL.utilitarios.Conexao;
 import java.sql.Connection;
@@ -20,12 +19,12 @@ import java.util.logging.Logger;
 public class AdministradorDAO {
     
     
-    //inserir novo usuário na tabela 'usuario'
+    //inserir novo administrador na tabela 'administrador'
     public void create (Administrador admin){
         Connection con = Conexao.getConnection();
-        PreparedStatement stm= null;
+        PreparedStatement stm = null;
         try {
-            stm=con.prepareStatement("INSERT INTO administrador(nome,login,senha) VALUES (?,?,?) ");
+            stm = con.prepareStatement("INSERT INTO administrador(nome,login,senha) VALUES (?,?,?) ");
             stm.setString(1,admin.getNome());
             stm.setString(2,admin.getLogin());
             stm.setString(3, admin.getSenha());
@@ -36,17 +35,17 @@ public class AdministradorDAO {
             Conexao.closeConnection(con, stm);
         }
     }
-    //edita um usuario
+    //edita um administrador
     public void editar (Administrador admin, String id){
         Connection con = Conexao.getConnection();
         PreparedStatement stm= null;
         try {
             stm=con.prepareStatement("UPDATE administrador\n" +
-                                    "SET login = ?,  senha = ?, \n" +
+                                    "SET nome = ?, login = ?,  senha = ?, \n" +
                                     "where id = ?;");
-            stm.setString(1, admin.getLogin());
-            stm.setString(2, admin.getSenha());
-            stm.setString(8, id);
+            stm.setString(1,admin.getNome());
+            stm.setString(2,admin.getLogin());
+            stm.setString(3, admin.getSenha());
             stm.executeUpdate();
         }catch (SQLException ex) {
             Logger.getLogger(Administrador.class.getName()).log(Level.SEVERE, null, ex);
