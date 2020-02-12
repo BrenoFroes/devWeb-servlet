@@ -12,6 +12,9 @@ import java.util.logging.Logger;
 public class Conexao {
     //propriedades da conexão
     private static final String DRIVER = "com.mysql.jdbc.Driver";
+// =======
+//     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
+// >>>>>>> Tentando resolucao
     private static final String URL = "jdbc:mysql://localhost:3306/escola?useLegacyDatetimeCode=false&serverTimezone=America/New_York";
     private static final String USER = "root";
     private static final String PASS = "";

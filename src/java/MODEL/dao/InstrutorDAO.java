@@ -45,7 +45,7 @@ public class InstrutorDAO {
         Connection con = Conexao.getConnection();
         PreparedStatement stm = null;
         try {
-            stm = con.prepareStatement("UPDATE instrutor\n"
+            stm = con.prepareStatement("UPDATE instrutores\n"
                     + "SET nome = ?,  email = ?, valor_hora = ?,\n"
                     + "login = ?, senha = ?, experiencia = ?;");
             stm.setString(1, instrutor.getNome());
@@ -69,7 +69,7 @@ public class InstrutorDAO {
         Instrutor instrutor = new Instrutor();
 
         try {
-            stm = con.prepareStatement("select * from curso where id = ?");
+            stm = con.prepareStatement("select * from cursos where id = ?");
             stm.setString(1, id);
             resultado = stm.executeQuery();
             while (resultado.next()) {

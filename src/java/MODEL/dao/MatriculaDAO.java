@@ -20,7 +20,7 @@ public class MatriculaDAO {
         PreparedStatement stm= null;
         
         try {
-            stm=con.prepareStatement("INSERT INTO matricula(data_matricula, nota) VALUES (?,?)");
+            stm=con.prepareStatement("INSERT INTO matriculas(data_matricula, nota) VALUES (?,?)");
             stm.setString(1, mat.getDataMatriculaString());
             stm.setFloat(2, mat.getNota());
             stm.executeUpdate();
@@ -36,7 +36,7 @@ public class MatriculaDAO {
         PreparedStatement stm= null;
         
         try {
-            stm=con.prepareStatement("UPDATE matricula\n" +
+            stm=con.prepareStatement("UPDATE matriculas\n" +
                                     "SET data_matricula = ?,  nota = ?, \n" +
                                     "where id = ?;");
             stm.setString(1, mat.getDataMatriculaString());
@@ -58,7 +58,7 @@ public class MatriculaDAO {
         Matricula mat = new Matricula();
         
         try{
-            stm = con.prepareStatement("select * from matricula where id = ?");
+            stm = con.prepareStatement("select * from matriculas where id = ?");
             stm.setString(1, id);
             resultado = stm.executeQuery();
             while(resultado.next()){
