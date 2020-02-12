@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../style.css" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/all.css">
+	<script defer src="../js/all.js"></script>
+	<link rel="shortcut icon" href="../cerebro.ico">
+	<title>Lero Lero</title>
+</head>
+  <body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"">
+		<a class="navbar-brand" href="../index.jsp">
+		<img src="../cerebro.png" width="30" height="30" class="d-inline-block align-top mr-2 iconeTitulo" alt="">
+		<div class="titulo">
+			<p class="tituloPrincipal">Lero Lero</p>
+			<p class="subtitulo">tabelas</p>
+		</div>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav mt-1">
+				<li class="nav-item">
+					<a class="nav-link" href="../index.jsp">home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="instrutores.html">instrutores</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="cursos.html">cursos </a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="tabelas.html">tabelas<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="comentarios.html">comentários</a>
+				</li>
+				<li class="nav-item mr-5">
+					<a class="nav-link" href="sobre.html">sobre</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="login.html">
+						<button type="button" class="btn btn-light px-3 py-0">Login</button>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="cadastrar.html">
+						<button type="button" class="btn btn-outline-light px-3 py-0" data-toggle="modal"
+							data-target="#exampleModal">Registro</button>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container mt-5 px-5">
+        <div class="text-center">
+            <h2>TABELAS	</h2>
+			<hr class="cursos">
+			<a class="link" href="cursos.html">
+				<button class="btn btn-block my-3 btn-secondary btn-lg tabelaCurso">
+					<i class="fa fa-plus mr-1"></i>
+					cadastrar curso
+				</button>
+			</a>
+			<a class="link" href="instrutores.html">
+				<button class="btn btn-block my-3 btn-secondary btn-lg tabelaInstrutor">
+					<i class="fa fa-plus mr-1"></i>
+					cadastrar instrutor
+				</button>
+			</a>
+			<a class="link" href="comentarios.html">
+				<button class="btn btn-block my-3 btn-secondary btn-lg tabelaComentario">
+					<i class="fa fa-plus mr-1"></i>
+					adicionar comentários
+				</button>
+			</a>
+			<a class="link" href="cadastrar.html">
+				<button class="btn btn-block my-3 btn-secondary btn-lg tabelaAluno">
+					<i class="fa fa-plus mr-1"></i>
+					cadastrar aluno
+				</button>
+			</a>
+				<button class="btn btn-block my-3 btn-secondary btn-lg tabelaMatricula" data-toggle="modal" data-target="#modalMatricula">
+					<i class="fa fa-plus mr-1"></i>
+					realizar matrículas
+				</button>
+			<a class="link" href="cadastroAdministrador.html">
+				<button class="btn btn-block my-3 btn-secondary btn-lg tabelaAdmin">
+					<i class="fa fa-plus mr-1"></i>
+					cadastrar admin
+				</button>
+			</a>
+			<a class="link" href="turma.html">
+				<button class="btn btn-block my-3 btn-secondary btn-lg tabelaAdmin">
+					<i class="fa fa-plus mr-1"></i>
+					adicionar turma
+				</button>
+			</a>
+		</div>
+	</div>
+		<!-- Modal -->
+		<div class="modal fade" id="modalMatricula" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Entre com as informações:</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form action="#" onsubmit="adicionarMatricula(this)">
+					<div class="form-group">
+					  <label for="inputTurmaM">Turma:</label>
+					  <input class="form-control" id="inputTurmaM">
+					  <small id="turmaHelpM" class="form-text"></small>
+					</div>
+					<div class="form-group">
+						<label for="inputAlunoM">Aluno:</label>
+						<input type="text" class="form-control" id="inputAlunoM">
+						<small id="alunoHelpM" class="form-text"></small>
+					</div>
+					<div class="form-group">
+					  <label for="inputNotaM">Nota:</label>
+					  <input class="form-control" id="inputNotaM" rows="3"></textarea>
+					  <small id="notaHelpM" class="form-text"></small>
+					</div>
+					<div class="form-group">
+						<label for="inputDataM">Data:</label>
+						<input type="date" class="form-control" id="inputDataM">
+						<small id="dataHelpM" class="form-text"></small>
+					</div>
+					<button type="submit" class="btn btn-primary ml-3" style="float: right;">Salvar</button>
+					<button type="button" class="btn btn-outline-danger" data-dismiss="modal" style="float: right;">Cancelar</button>
+					
+				</form>
+			</div>
+		</div>
+    <!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="../js/nossosScripts/adicionarItens.js"></script>
+	<script src="../js/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="../js/popper.min.js" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>

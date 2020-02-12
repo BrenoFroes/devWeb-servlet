@@ -1,0 +1,158 @@
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body{
+    background-color: rgba(52,58,64,0.9);
+}
+h1, h2, h3{
+    color: white;
+}
+h4{
+    color: white;
+}
+div{
+    display: block;
+}
+h2{
+    text-align: center;
+}
+p{
+    color: rgb(212, 212, 212);
+    font-weight: 200;
+}
+a{
+    color: rgb(1, 1, 131);
+    font-weight: bolder !important;
+}
+form{
+    color: white;
+}
+input[type="text"],input[type="number"],input[type="password"],input[type="date"], textarea{
+    color: rgb(0, 0, 0);
+    background-color: rgb(204, 204, 204);
+    border: 1px solid rgb(148, 148, 148);
+}
+textarea, textarea[type="text"]{
+    color: rgb(0, 0, 0);
+    background-color: rgb(204, 204, 204);
+    border: 1px solid rgb(148, 148, 148);
+}
+small{
+    color: rgb(255, 122, 122);
+    font-weight: bold;
+    font-size: 15px;
+    border: white;
+}
+button.circulo{
+    float: right;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+}
+a.nav-link{
+    font-weight: 200 !important;
+}
+.itemCentral{
+    color: black; 
+    margin-top: 15px;
+}
+hr.cursos{
+    color: rgba(255, 255, 255, 1);
+    height: 10px;
+    width: 60vw;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.navbar-brand{
+    font-weight: 500;
+}
+.titulo{
+    display: inline-block;
+}
+.iconeTitulo{
+    margin: 10px;
+}
+.tituloPrincipal{
+    color: #8203db;
+    display: inline-block;
+    margin: 0px;
+    margin-top: 5px;
+    padding: 0px;
+    font-weight: bolder;
+}
+.subtitulo{
+    color: rgb(150, 150, 150);
+    font-size: 10px;
+    margin: 0px;
+    margin-top: -10px;
+    padding: 0px;
+    font-weight: normal;
+}
+.bg-secondary{
+    color: rgba(255, 255, 255, 0.7);
+}
+.carousel-item{
+    height: 675px;
+}
+.addCurso{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 2;
+}
+.addTurma{
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    z-index: 2;
+}
+.matricularSe{
+}
+.addComentario{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 2;
+}
+.cardTurmas{
+    height: auto !important;
+}
+.card-img-top{
+    width: 100%;
+    height: 200px;
+}
+.listaAlunos{
+    font-weight: 400 !important;
+}
+ul{
+    list-style: none;
+}
+.listaAlunosItem{
+    font-weight: 200 !important;
+}
+.comentarioTurma{
+    float: left;
+    color: white;
+}
+.comentarioTurma:hover{
+    text-decoration: none;
+    color: rgb(179, 225, 240);
+}
+.imagemPerfil{
+    border-radius: 50%; 
+    max-width: 100px;
+    box-shadow: 0 3px 5px rgba(221, 221, 221, 0.767), 0 3px 5px rgba(235, 235, 235, 0.712);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.card{
+    height: 450px;
+    text-align: center;
+}
+.cardComentario{
+    height: 250px;
+}
+p.card-text{
+    font-size: 15px;
+}
+
+
