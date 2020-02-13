@@ -13,6 +13,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  *
@@ -40,7 +42,7 @@ public class CursoDAO {
         }
     }
 
-    /*public void editar(Curso curso, String id) {
+    public void editar(Curso curso, String id) {
         Connection con = Conexao.getConnection();
         PreparedStatement stm = null;
         try {
@@ -81,5 +83,34 @@ public class CursoDAO {
             Conexao.closeConnection(con, null, resultado);
         }
         return curso;
-    }*/
+    }
+    
+    //lista todos os cursos
+    public List<Curso> buscarCursos(){
+        Connection con = Conexao.getConnection();
+        PreparedStatement stm = null;
+        ResultSet resultado = null;
+        List<Curso> listaCursos = new ArrayList();
+        try{
+            stm = con.prepareStatement("select * from cursos;");
+            resultado = stm.executeQuery();
+            while(resultado.next()){
+                Curso curso = new Curso();
+                curso.setId(resultado.getInt("id"));
+                curso.setNome(resultado.getString("nome"));
+                curso.setRequisito(resultado.getString("requisito"));
+                curso.setEmenta(resultado.getString("ementa"));
+                curso.setCargaHoraria(resultado.getInt("carga_horaria"));
+                curso.setPreco(resultado.getDouble("preco"));               
+                listaCursos.add(curso);
+            }
+        } catch (SQLException ex) {
+            System.out.println("Driver não pôde ser carregado: "+ex);
+        } finally{
+            Conexao.closeConnection(con, null, resultado);
+        }
+        //Collections.sort(listaAlunos);
+        //Collections.sort(listaAlunos, java.util.Comparator.comparing(Aluno::getNome));
+        return listaCursos;
+     }
 }

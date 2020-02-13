@@ -18,7 +18,7 @@ public class Instrutor {
     
     private String email;
    
-    private int valor_hora;
+    private double valor_hora;
     
     private String login;
     
@@ -52,11 +52,11 @@ public class Instrutor {
         return this.email;
     }
     
-    public void setValorHora(Integer valor){
+    public void setValorHora(double valor){
         this.valor_hora = valor;
     }
     
-    public Integer getValorHora(){
+    public double getValorHora(){
         return this.valor_hora;
     }
     

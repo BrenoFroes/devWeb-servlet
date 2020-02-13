@@ -1,3 +1,13 @@
+<%@page import="MODEL.classes.Turma"%>
+<%@page import="MODEL.dao.TurmaDAO"%>
+<%@page import="MODEL.classes.Instrutor"%>
+<%@page import="MODEL.dao.InstrutorDAO"%>
+<%@page import="MODEL.classes.Curso"%>
+<%@page import="MODEL.dao.CursoDAO"%>
+<%@page import="MODEL.dao.AlunoDAO"%>
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="MODEL.classes.Aluno"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="header.jsp" %>
 <div class="container mt-5 py-3" style="text-align: left;">
@@ -19,9 +29,18 @@
                 <div class="row">
                    <div class="col-10">
                        <p class="itemCentral">
-                           Data de início: 03/11
-                            Data de fim: 23/12
-                            Carga horária 23h
+                           <%  TurmaDAO turmaDAO = new TurmaDAO();
+                               ArrayList <Turma> listaT = (ArrayList<Turma>)turmaDAO.buscarTurmas();
+                               //ArrayList <Turma> listaT = (ArrayList<Turma>) request.getAttribute("turmas"); Não está funcionando
+                               Turma turma = new Turma();
+                               for(int i = 0; i < listaT.size(); i++){
+                                  turma = listaT.get(i);
+                                  out.println("Data Início " + turma.getDataInicio() + " ");
+                                  out.println("Data Fim: " + turma.getDataFim() + " ");
+                                  out.println("Carga Horária: " + turma.getCargaHoraria() + " ");
+                                  out.println();
+                           }
+                           %>
                        </p>
                    </div>
                     <div class="col-2 mt-3" style="font-size: 20px;">
@@ -81,20 +100,26 @@
         <li>
            <div class="alert alert-secondary py-0  my-1 ml-n" role="alert">
                <div class="row">
-                   <div class="col-10">
+                   <div class="col-10"> 
                        <p class="itemCentral">
-                        Nome: Breno
-                        Email: breno@msn.com
-                        Experiencia: Nada 
+                        <% InstrutorDAO instrutorDAO = new InstrutorDAO();
+                               ArrayList <Instrutor> listaI = (ArrayList<Instrutor>)instrutorDAO.buscarInstrutores(); 
+                               Instrutor instrutor = new Instrutor();
+                               for(int i = 0; i < listaI.size(); i++){
+                                  instrutor = listaI.get(i);
+                                  out.println("Nome: " + instrutor.getNome() + " ");
+                                  out.println("Email: " + instrutor.getEmail() + " ");
+                                  out.println("Experiência: " + instrutor.getExperiencia() + " ");
+                                  out.println();
+                           }
+                           %>
                         </p>
                    </div>
                    <div class="col-2 mt-3" style="font-size: 20px;">
                         <i class="far fa-edit mx-2"></i> 
                         <i class="far fa-trash-alt ml-2 mr-0"></i>
                    </div>
-               </div>
-                
-                
+               </div>   
            </div>
         </li>
         <li>
@@ -132,9 +157,17 @@
                <div class="row">
                    <div class="col-10">
                        <p class="itemCentral">
-                        Nome: Informática
-                        Carga horária: 60h
-                        Preco: R$23
+                            <% CursoDAO cursoDAO = new CursoDAO();
+                               ArrayList <Curso> listaC = (ArrayList<Curso>)cursoDAO.buscarCursos(); 
+                               Curso curso = new Curso();
+                               for(int i = 0; i < listaC.size(); i++){
+                                  curso = listaC.get(i);
+                                  out.println("Nome: " + curso.getNome() + " ");
+                                  out.println("Carga Horária: " + curso.getCargaHoraria() + " ");
+                                  out.println("Preço: " + curso.getPreco() + " ");
+                                  out.println();
+                           }
+                           %>
                         </p>
                    </div>
                    <div class="col-2 mt-3" style="font-size: 20px;">
@@ -198,10 +231,18 @@
                <div class="row">
                    <div class="col-10">
                        <p class="itemCentral">
-                        Nome: Breno
-                        Email: breno@msn.com
-                        Celular: 219883114432
-                        Cpf: 72822297319
+                           <% AlunoDAO alunoDAO = new AlunoDAO();
+                               ArrayList <Aluno> listaA = (ArrayList<Aluno>)alunoDAO.buscarAlunos(); 
+                              Aluno aluno = new Aluno();
+                              for(int i = 0; i < listaA.size(); i++){
+                                  aluno = listaA.get(i);
+                                  out.println("Nome: " + aluno.getNome() + " ");
+                                  out.println("Email: " + aluno.getEmail() + " ");
+                                  out.println("Celular: " + aluno.getCelular() + " ");
+                                  out.println("CPF: " + aluno.getCpf() + " ");
+                                  out.println();
+                           }
+                           %>
                         </p>
                    </div>
                    <div class="col-2 mt-3" style="font-size: 20px;">
@@ -209,8 +250,6 @@
                         <i class="far fa-trash-alt ml-2 mr-0"></i>
                    </div>
                </div>
-                
-                
            </div>
         </li>
         <li>

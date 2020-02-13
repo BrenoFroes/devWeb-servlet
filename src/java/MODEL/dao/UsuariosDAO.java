@@ -31,11 +31,8 @@ public class UsuariosDAO{
         Aluno aluno = new Aluno();
         
         try{
-<<<<<<< HEAD
             stm = con.prepareStatement("select * from aluno where id = ?");
-=======
             stm = con.prepareStatement("select * from alunos where id = ?");
->>>>>>> Tentando resolucao
             stm.setString(1, id);
             resultado = stm.executeQuery();
             while(resultado.next()){
@@ -58,11 +55,8 @@ public class UsuariosDAO{
         ResultSet resultado = null;
         Aluno aluno = new Aluno();
         try{
-<<<<<<< HEAD
             stm = con.prepareStatement("select * from aluno where login = ? and senha = ?");
-=======
             stm = con.prepareStatement("select * from alunos where login = ? and senha = ?");
->>>>>>> Tentando resolucao
             stm.setString(1, login);
             stm.setString(2, senha);
             resultado = stm.executeQuery();

@@ -5,6 +5,7 @@
  */
 package MODEL.dao;
 
+import MODEL.classes.Instrutor;
 import MODEL.classes.Turma;
 import MODEL.utilitarios.Conexao;
 import java.sql.Connection;
@@ -15,6 +16,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  *
@@ -79,5 +82,34 @@ public class TurmaDAO {
             Conexao.closeConnection(con, null, resultado);
         }
         return turma;
+    }
+    
+    //lista todos os alunos
+    public List<Turma> buscarTurmas() {
+        Connection con = Conexao.getConnection();
+        PreparedStatement stm = null;
+        ResultSet resultado = null;
+        List<Turma> listaTurmas = new ArrayList();
+        try {
+            stm = con.prepareStatement("select * from turmas;");
+            resultado = stm.executeQuery();
+            while (resultado.next()) {
+                Turma turma = new Turma();
+                turma.setId(resultado.getInt("id"));
+                turma.setInstrutoresId(resultado.getInt("instrutores_id"));
+                turma.setCursosId(resultado.getInt("cursos_id"));
+                turma.setDataInicio(resultado.getDate("data_inicio"));
+                turma.setDataFim(resultado.getDate("data_final"));
+                turma.setCargaHoraria(resultado.getInt("carga_horaria"));
+                listaTurmas.add(turma);
+            }
+        } catch (SQLException ex) {
+            System.out.println("Driver não pôde ser carregado: " + ex);
+        } finally {
+            Conexao.closeConnection(con, null, resultado);
+        }
+        //Collections.sort(listaAlunos);
+        //Collections.sort(listaAlunos, java.util.Comparator.comparing(Aluno::getNome));
+        return listaTurmas;
     }
 }

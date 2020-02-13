@@ -7,31 +7,26 @@
     <servlet>
         <servlet-name>InstrutorController</servlet-name>
         <servlet-class>controller.InstrutorController</servlet-class>
-<!-- =======
-        <servlet-name>LoginController</servlet-name>
-        <servlet-class>controller.LoginController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>AdminController</servlet-name>
         <servlet-class>controller.AdminController</servlet-class>
->>>>>>> Tentando resolucao -->
     </servlet>
     <servlet>
         <servlet-name>AlunoController</servlet-name>
         <servlet-class>controller.AlunoController</servlet-class>
     </servlet>
-        <servlet>
+    <servlet>
         <servlet-name>TurmaController</servlet-name>
         <servlet-class>controller.TurmaController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>MatriculaController</servlet-name>
         <servlet-class>controller.MatriculaController</servlet-class>
-<!-- =======
+    </servlet>
     <servlet>
         <servlet-name>ComentarioController</servlet-name>
         <servlet-class>controller.ComentarioController</servlet-class>
->>>>>>> Tentando resolucao -->
     </servlet>
     <servlet>
         <servlet-name>CursoController</servlet-name>
@@ -45,10 +40,6 @@
         <servlet-name>LoginController</servlet-name>
         <servlet-class>controller.LoginController</servlet-class>
     </servlet>
-
-<!-- =======
-
-    
     <servlet-mapping>
         <servlet-name>AdministradorController</servlet-name>
         <url-pattern>/controller/AdministradorController</url-pattern>
@@ -60,9 +51,7 @@
     <servlet-mapping>
         <servlet-name>TurmaController</servlet-name>
         <url-pattern>/controller/TurmaController</url-pattern>
-        <servlet-name>InstrutorController</servlet-name>
-        <servlet-class>controller.InstrutorController</servlet-class>
-    </servlet>
+    </servlet-mapping>
     <servlet>
         <servlet-name>MatriculaController</servlet-name>
         <servlet-class>controller.MatriculaController</servlet-class>
@@ -102,7 +91,6 @@
     <servlet-mapping>
         <servlet-name>TurmaController</servlet-name>
         <url-pattern>/TurmaController</url-pattern>
->>>>>>> Tentando resolucao -->
     </servlet-mapping>
     <session-config>
         <session-timeout>

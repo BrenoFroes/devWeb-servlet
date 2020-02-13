@@ -4,6 +4,8 @@ import MODEL.dao.AlunoDAO;
 import MODEL.classes.Aluno;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,10 +21,10 @@ public class AlunoController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("Servlet ok");
-        }
+        List<Aluno> alunos = new ArrayList();
+        alunos = alunoDAO.buscarAlunos();
+        request.setAttribute("alunos", alunos);
+        request.getRequestDispatcher("centralAdministrador.jsp").forward(request, response);    
     }
 
     @Override

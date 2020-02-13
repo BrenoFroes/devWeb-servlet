@@ -10,6 +10,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
@@ -44,7 +47,7 @@ public class AlunoDAO{
             Conexao.closeConnection(con, stm);
         }
     }
-    //edita um usuario
+    //edita um aluno
     public void editar (Aluno aluno, String id){
         Connection con = Conexao.getConnection();
         PreparedStatement stm= null;
@@ -95,7 +98,7 @@ public class AlunoDAO{
         }
     }
      
-    //recuperar Usuario informando o 'id' do mesmo
+    //recuperar Aluno informando o 'id' do mesmo
     public Aluno getById (String id){
         Connection con = Conexao.getConnection();
         PreparedStatement stm; 
@@ -119,7 +122,7 @@ public class AlunoDAO{
         return aluno;
     }
     
-    //validar se Usuario existe no banco de dados através de seu email e senha para Login
+    //validar se Aluno existe no banco de dados através de seu email e senha para Login
     public Aluno validateUser (String login, String senha){
         Connection con = Conexao.getConnection();
         PreparedStatement stm; 
@@ -141,5 +144,41 @@ public class AlunoDAO{
             Conexao.closeConnection(con, null, resultado);
         }
         return aluno;
-    } 
-}
+    }
+    
+    //lista todos os alunos
+    public List<Aluno> buscarAlunos(){
+        Connection con = Conexao.getConnection();
+        PreparedStatement stm = null;
+        ResultSet resultado = null;
+        List<Aluno> listaAlunos = new ArrayList();
+        try{
+            stm = con.prepareStatement("select * from alunos;");
+            resultado = stm.executeQuery();
+            while(resultado.next()){
+                Aluno aluno = new Aluno();
+                aluno.setId(resultado.getInt("id"));
+                aluno.setCpf(resultado.getString("cpf"));
+                aluno.setNome(resultado.getString("nome"));
+                aluno.setEmail(resultado.getString("email"));
+                aluno.setCelular(resultado.getString("celular"));
+                aluno.setLogin(resultado.getString("login"));
+                aluno.setSenha(resultado.getString("senha"));
+                aluno.setEndereco(resultado.getString("endereco"));
+                aluno.setCidade(resultado.getString("cidade"));
+                aluno.setBairro(resultado.getString("bairro"));
+                aluno.setCep(resultado.getString("cep"));
+                aluno.setComentario(resultado.getString("comentario"));
+                aluno.setAprovado(resultado.getString("aprovado"));
+                listaAlunos.add(aluno);
+            }
+        } catch (SQLException ex) {
+            System.out.println("Driver não pôde ser carregado: "+ex);
+        } finally{
+            Conexao.closeConnection(con, null, resultado);
+        }
+        //Collections.sort(listaAlunos);
+        //Collections.sort(listaAlunos, java.util.Comparator.comparing(Aluno::getNome));
+        return listaAlunos;
+     }
+    }

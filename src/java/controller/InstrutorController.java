@@ -9,6 +9,8 @@ import MODEL.classes.Instrutor;
 import MODEL.dao.InstrutorDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,10 +30,10 @@ public class InstrutorController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("Servlet ok");
-        }
+        List<Instrutor> instrutores = new ArrayList();
+        instrutores = instrutorDAO.buscarInstrutores();
+        request.setAttribute("instrutores", instrutores);
+        request.getRequestDispatcher("centralAdministrador.jsp").forward(request, response);
     }
 
     @Override

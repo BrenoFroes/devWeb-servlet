@@ -11,6 +11,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -29,7 +31,7 @@ public class InstrutorDAO {
                     + "VALUES (?,?,?,?,?,?)");
             stm.setString(1, instrutor.getNome());
             stm.setString(2, instrutor.getEmail());
-            stm.setString(3, Integer.toString(instrutor.getValorHora()));
+            stm.setString(3, Double.toString(instrutor.getValorHora()));
             stm.setString(4, instrutor.getLogin());
             stm.setString(5, instrutor.getSenha());
             stm.setString(6, instrutor.getExperiencia());
@@ -50,7 +52,7 @@ public class InstrutorDAO {
                     + "login = ?, senha = ?, experiencia = ?;");
             stm.setString(1, instrutor.getNome());
             stm.setString(2, instrutor.getEmail());
-            stm.setString(3, Integer.toString(instrutor.getValorHora()));
+            stm.setString(3, Double.toString(instrutor.getValorHora()));
             stm.setString(4, instrutor.getLogin());
             stm.setString(5, instrutor.getSenha());
             stm.setString(6, instrutor.getExperiencia());
@@ -107,4 +109,34 @@ public class InstrutorDAO {
         }
         return instrutor;
     }
+    
+    //lista todos os intrutores
+    public List<Instrutor> buscarInstrutores(){
+        Connection con = Conexao.getConnection();
+        PreparedStatement stm = null;
+        ResultSet resultado = null;
+        List<Instrutor> listaInstrutores = new ArrayList();
+        try{
+            stm = con.prepareStatement("select * from instrutores;");
+            resultado = stm.executeQuery();
+            while(resultado.next()){
+                Instrutor instrutor = new Instrutor();
+                instrutor.setId(resultado.getInt("id"));
+                instrutor.setNome(resultado.getString("nome"));
+                instrutor.setEmail(resultado.getString("email"));
+                instrutor.setValorHora(resultado.getDouble("valor_hora"));
+                instrutor.setLogin(resultado.getString("login"));
+                instrutor.setSenha(resultado.getString("senha"));
+                instrutor.setExperiencia(resultado.getString("experiencia"));
+                listaInstrutores.add(instrutor);
+            }
+        } catch (SQLException ex) {
+            System.out.println("Driver não pôde ser carregado: "+ex);
+        } finally{
+            Conexao.closeConnection(con, null, resultado);
+        }
+        //Collections.sort(listaAlunos);
+        //Collections.sort(listaAlunos, java.util.Comparator.comparing(Aluno::getNome));
+        return listaInstrutores;
+     }
 }
